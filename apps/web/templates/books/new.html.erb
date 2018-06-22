@@ -1,0 +1,19 @@
+<h2>本の追加</h2>
+
+<%= 
+    form_for :book, '/books' do
+        div class: 'input' do
+            label 'タイトル', for: :title
+            text_field :title
+        end
+
+        div class: 'input' do
+            label '著者', for: :author
+            text_field :author
+        end
+
+        div class: 'controls' do
+            submit '作成'
+        end
+    end
+%>
