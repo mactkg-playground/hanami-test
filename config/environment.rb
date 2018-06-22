@@ -14,9 +14,9 @@ Hanami.configure do
     # Available options:
     #
     #  * SQL adapter
-    #    adapter :sql, 'sqlite://db/._development.sqlite3'
-    #    adapter :sql, 'postgresql://localhost/._development'
-    #    adapter :sql, 'mysql://localhost/._development'
+    #    adapter :sql, 'sqlite://db/bookshelf_development.sqlite3'
+    #    adapter :sql, 'postgresql://localhost/bookshelf_development'
+    #    adapter :sql, 'mysql://localhost/bookshelf_development'
     #
     adapter :sql, ENV.fetch('DATABASE_URL')
 
@@ -28,7 +28,7 @@ Hanami.configure do
   end
 
   mailer do
-    root 'lib/./mailers'
+    root 'lib/bookshelf/mailers'
 
     # See http://hanamirb.org/guides/mailers/delivery
     delivery :test
